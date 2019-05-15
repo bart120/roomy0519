@@ -12,7 +12,12 @@ export class TopFiveComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    this.rooms = [
+      { name: 'Calliope', image: 'Calliope.jpg' },
+      { name: 'Thalie', image: 'Thalie.jpg' },
+      { name: 'Calliope', image: 'Calliope.jpg' },
+      { name: 'Thalie', image: 'Thalie.jpg' }
+    ];
   }
 
 }
