@@ -6,6 +6,7 @@ import { ListComponent } from './pages/room/list/list.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { NotFoundComponent } from './pages/home/not-found/not-found.component';
 import { DetailComponent } from './pages/room/detail/detail.component';
+import { LoginComponent } from './pages/authentication/login/login.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -16,7 +17,11 @@ export const routes: Routes = [
             { path: 'add', component: CreateComponent },
             { path: 'list', component: ListComponent },
             { path: 'detail/:id', component: DetailComponent }
-
+        ]
+    },
+    {
+        path: 'auth', children: [
+            { path: 'login', component: LoginComponent }
         ]
     },
     { path: '', pathMatch: 'full', redirectTo: 'home' },
