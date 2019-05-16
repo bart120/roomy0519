@@ -1,4 +1,5 @@
-<mat-grid-list cols="{{rooms.length}}">
+<ng-content #name></ng-content>
+<mat-grid-list cols="5">
   <mat-grid-tile *ngFor="let room of rooms">
     <mat-card>
       <mat-card-header>

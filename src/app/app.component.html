@@ -15,10 +15,29 @@
         </a>
     </div>
     <div>
-        <a href="" mat-button>
-            <mat-icon>locked_out</mat-icon>
-            Login
-        </a>
+        <ng-container *ngIf="user == null; else log">
+            <a href="" mat-button>
+                <mat-icon>locked_out</mat-icon>
+                Login
+            </a>
+        </ng-container>
+        <ng-template #log>
+            Bonjour {{user?.login}}
+            <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </ng-template>
+
+        <mat-menu #appMenu="matMenu">
+            <a href="" mat-menu-item>
+                <mat-icon class="mat-18">person</mat-icon>
+                Profile
+            </a>
+            <button mat-menu-item>
+                <mat-icon class="mat-18">locked_in</mat-icon>
+                Logout
+            </button>
+        </mat-menu>
     </div>
 </mat-toolbar>
 
@@ -26,5 +45,7 @@
 blabla
 
 <footer>
-    <app-top-five></app-top-five>
+    <app-top-five>
+        <h2>TOP 5</h2>
+    </app-top-five>
 </footer>
