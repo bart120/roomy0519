@@ -6,6 +6,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatIconModule,
         MatGridListModule,
         MatCardModule,
-        MatMenuModule
+        MatMenuModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     exports: [
         MatToolbarModule,
@@ -25,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatIconModule,
         MatGridListModule,
         MatCardModule,
-        MatMenuModule
+        MatMenuModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     providers: [],
 })
