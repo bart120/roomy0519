@@ -1,15 +1,15 @@
 <mat-toolbar color="primary" class="flex-container">
     <div>
         <span [textContent]="title"></span>
-        <a href="" mat-button>
+        <a routerLink="home" mat-button>
             <mat-icon>home</mat-icon>
             Accueil
         </a>
-        <a href="" mat-button>
+        <a routerLink="rooms/list" mat-button>
             <mat-icon>room</mat-icon>
             Salles
         </a>
-        <a href="" mat-button>
+        <a routerLink="rooms/add" mat-button>
             <mat-icon>add</mat-icon>
             Ajouter
         </a>
@@ -41,8 +41,7 @@
     </div>
 </mat-toolbar>
 
-
-blabla
+<router-outlet></router-outlet>
 
 <footer>
     <app-top-five>
