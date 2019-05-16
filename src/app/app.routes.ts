@@ -3,15 +3,23 @@ import { AppComponent } from './app.component';
 import { RoomModule } from './pages/room/room.module';
 import { CreateComponent } from './pages/room/create/create.component';
 import { ListComponent } from './pages/room/list/list.component';
+import { HomeComponent } from './pages/home/home/home.component';
+import { NotFoundComponent } from './pages/home/not-found/not-found.component';
+import { DetailComponent } from './pages/room/detail/detail.component';
 
 export const routes: Routes = [
-    { path: 'home', component: AppComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'notfound', component: NotFoundComponent },
     {
         // path: 'rooms', loadChildren: () => RoomModule
         path: 'rooms', children: [
             { path: 'add', component: CreateComponent },
-            { path: 'list', component: ListComponent }
+            { path: 'list', component: ListComponent },
+            { path: 'detail/:id', component: DetailComponent }
+
         ]
-    }
+    },
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '**', redirectTo: 'notfound' }
 ];
 

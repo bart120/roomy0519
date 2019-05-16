@@ -4,12 +4,14 @@ import { TopFiveComponent } from './top-five/top-five.component';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { MaterialModule } from 'src/app/material.module';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     TopFiveComponent,
     CreateComponent,
-    ListComponent
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,
