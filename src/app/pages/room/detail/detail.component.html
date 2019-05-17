@@ -1,3 +1,11 @@
-<p>
-  detail works!
-</p>
+<mat-card *ngIf="obsRoom | async as room">
+  <mat-card-header>
+    <mat-card-title>{{(obsRoom | async)?.name}}</mat-card-title>
+    <mat-card-subtitle>{{room.seatCount}} places</mat-card-subtitle>
+  </mat-card-header>
+  <img matCardImage src="assets/images/{{room.image}}">
+  <mat-card-content>
+    {{room.price}}
+  </mat-card-content>
+
+</mat-card>
