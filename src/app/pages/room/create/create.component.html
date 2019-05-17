@@ -9,6 +9,19 @@
     <input matInput type="text" formControlName="price" placeholder="Prix">
     <mat-error>Champ invalide</mat-error>
   </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" formControlName="seatCount" placeholder="Nombre de places">
+    <mat-error>Champ invalide</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select formControlName="image" placeholder="Image">
+      <mat-option *ngFor="let pic of pictures" [value]="pic.id">{{pic.image}}</mat-option>
+    </mat-select>
+    <mat-error>Champ invalide</mat-error>
+  </mat-form-field>
+
   <div>
     <button mat-button type="submit">Enregistrer</button>
   </div>

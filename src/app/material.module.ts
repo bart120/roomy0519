@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
         MatMenuModule,
         MatFormFieldModule,
         MatInputModule,
-        MatTableModule
+        MatTableModule,
+        MatSelectModule
     ],
     exports: [
         MatToolbarModule,
@@ -35,7 +37,8 @@ import { MatTableModule } from '@angular/material/table';
         MatMenuModule,
         MatFormFieldModule,
         MatInputModule,
-        MatTableModule
+        MatTableModule,
+        MatSelectModule
     ],
     providers: [],
 })
