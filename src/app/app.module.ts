@@ -9,7 +9,8 @@ import { routes } from './app.routes';
 import { HomeModule } from './pages/home/home.module';
 import { AuthenticationModule } from './pages/authentication/authentication.module';
 import { RoomService } from './services/room.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from './interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     //     {provide: RoomService, useClass: RoomService}
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
