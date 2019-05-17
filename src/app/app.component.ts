@@ -20,4 +20,8 @@ export class AppComponent implements OnInit {
     );
   }
 
+  logout(): void {
+    this.auth.updateUser(null);
+  }
+
 }
