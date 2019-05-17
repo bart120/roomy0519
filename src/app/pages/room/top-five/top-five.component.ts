@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RoomService } from 'src/app/services/room.service';
 import { Room } from 'src/app/models/room.model';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-top-five',
@@ -13,7 +14,7 @@ export class TopFiveComponent implements OnInit {
 
   //  private serv: RoomService;
   constructor(private serv: RoomService) {
-    //  this.serv = serv;
+    //  this.serv = serv;  
   }
 
   ngOnInit() {

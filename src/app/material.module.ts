@@ -8,6 +8,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { MatInputModule } from '@angular/material/input';
         MatCardModule,
         MatMenuModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatTableModule
     ],
     exports: [
         MatToolbarModule,
@@ -31,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
         MatCardModule,
         MatMenuModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatTableModule
     ],
     providers: [],
 })

@@ -27,4 +27,8 @@ export class RoomService {
         console.log('fin getTopFive');
         return null;
     }
+
+    getRooms(): Observable<Array<Room>> {
+        return this.http.get<Array<Room>>(environment.urlRoom);
+    }
 }
