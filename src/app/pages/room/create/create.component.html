@@ -1,3 +1,15 @@
-<p>
-  create works!
-</p>
+<h1>Ajouter une salle</h1>
+<form class="form" [formGroup]="formRoom" (ngSubmit)="submit()" novalidate>
+  <mat-form-field>
+    <input matInput type="text" formControlName="name" placeholder="Nom">
+    <mat-error>Champ obligatoire</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" formControlName="price" placeholder="Prix">
+    <mat-error>Champ invalide</mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-button type="submit">Enregistrer</button>
+  </div>
+</form>

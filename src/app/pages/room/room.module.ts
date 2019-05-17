@@ -7,6 +7,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { DetailComponent } from './detail/detail.component';
 import { RouterModule } from '@angular/router';
 import { PipeModule } from 'src/app/pipes/pipe.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PipeModule } from 'src/app/pipes/pipe.module';
     CommonModule,
     MaterialModule,
     RouterModule,
-    PipeModule
+    PipeModule,
+    ReactiveFormsModule
   ],
   exports: [
     TopFiveComponent
