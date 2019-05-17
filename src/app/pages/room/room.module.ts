@@ -5,6 +5,8 @@ import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { MaterialModule } from 'src/app/material.module';
 import { DetailComponent } from './detail/detail.component';
+import { RouterModule } from '@angular/router';
+import { PipeModule } from 'src/app/pipes/pipe.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DetailComponent } from './detail/detail.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+    PipeModule
   ],
   exports: [
     TopFiveComponent
