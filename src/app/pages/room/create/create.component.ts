@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { Room } from 'src/app/models/room.model';
 import { RoomService } from 'src/app/services/room.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create',
@@ -27,7 +28,7 @@ export class CreateComponent implements OnInit {
     { id: 'Thalie.jpg', image: 'Image Thalie' }
   ];
 
-  constructor(private serv: RoomService) { }
+  constructor(private serv: RoomService, private snack: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -35,7 +36,7 @@ export class CreateComponent implements OnInit {
   submit(): void {
     if (this.formRoom.valid) {
       this.serv.addRoom(this.formRoom.value as Room).subscribe(
-        data => alert(`Salle ${data.name} créée avec l'id ${data.id}`)
+        data => this.snack.open(`Salle ${data.name} créée avec l'id ${data.id}`, 'OK', { duration: 3000 }) //alert(`Salle ${data.name} créée avec l'id ${data.id}`)
       );
     }
   }

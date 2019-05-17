@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -26,7 +27,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatFormFieldModule,
         MatInputModule,
         MatTableModule,
-        MatSelectModule
+        MatSelectModule,
+        MatSnackBarModule
     ],
     exports: [
         MatToolbarModule,
@@ -38,7 +40,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatFormFieldModule,
         MatInputModule,
         MatTableModule,
-        MatSelectModule
+        MatSelectModule,
+        MatSnackBarModule
     ],
     providers: [],
 })
